@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Atividade sala
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-select [(ngModel)]="getData">
+    <ion-select-option value="opcao1">Opção 1</ion-select-option>
+    <ion-select-option value="opcao2">Opção 2</ion-select-option>
+    
+  </ion-select>
+
+  <ion-button expand="full" (click)="getData()">Fazer Requisição</ion-button>
+
+
+  <div *ngIf="resultado">
+   
+    {{ resultado | json }}
+
+  </div>
+</ion-content>
